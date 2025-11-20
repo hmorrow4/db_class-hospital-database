@@ -46,3 +46,17 @@ CREATE TABLE Enrollment (
     FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
     FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
 );
+
+CREATE TABLE Professor (
+    ProfessorID INT PRIMARY KEY,
+    First_Name VARCHAR(50),
+    Last_Name VARCHAR(50),
+    Email VARCHAR(100),
+    Title VARCHAR(50),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Department(DepartmentID)
+);
+
+
+
+
